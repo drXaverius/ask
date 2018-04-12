@@ -2,13 +2,13 @@ plugins: [jekyll-paginate, jemoji]
 permalink: pretty
 
 title: Ask
-url: https://mx-psi.github.io
+url: https://drxaverius.github.io
 baseurl: /ask
 paginate: 20
 
 author:
-  name: 'Sparkles'
-  twitter: mx_psi
+  name: 'DrXaverius'
+  twitter: drxaverius
 
 avatar: public/avatar.jpg
 banner: public/banner.jpg

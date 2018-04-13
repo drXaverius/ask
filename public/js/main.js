@@ -9,7 +9,7 @@ var simplemde = new SimpleMDE({
 		delay: 1000,
 	},
   toolbar: ["bold", "italic", "|", "quote", "link", "|", "preview", "guide"],
-  placeholder: "Haz una pregunta!\nTu pregunta será pública en Github antes de ser respondida.",
+  placeholder: "Si tu pregunta es follow up a una pregunta previa enlaza a la respuesta que hice plox.\nTu pregunta será pública en Github antes de ser respondida.",
   spellChecker: false,
   shortcuts: {"toggleFullScreen": null},
   status: false
@@ -17,8 +17,8 @@ var simplemde = new SimpleMDE({
 
 // Autolink (modified from /bryanwoods/autolink-js)
 String.prototype['autoLink'] = function() {
-  var pattern = /(^|[\s\n]|\(|<[A-Za-z]*\/?>)(?:https?|ftp):\/\/([\-A-Z0-9+\u0026\u2019@#\/%?=()~_|!:,.]*[\-A-Z0-9+\u0026@#\/%=~(_|])/gi
-  return this.replace(pattern, "$1<a href='$2$3'>$2</a>")
+  var pattern = /(^|[\s\n]|\(|<[A-Za-z]*\/?>)((?:https?|ftp):\/\/[\-A-Z0-9+\u0026\u2019@#\/%?=()~_|!:,.]*[\-A-Z0-9+\u0026@#\/%=~(_|])/gi
+  return this.replace(pattern, "$1<a href='$2'>$2</a>")
 }
 var questions = document.getElementsByClassName("question")
 for(q of questions){q.innerHTML = q.innerHTML.autoLink()}
